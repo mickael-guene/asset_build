@@ -189,7 +189,7 @@ cd ${TOP}/build/gcc2
 #so create a temporary link toward sysroot/target/include
 rm -f ${TOP}/install/${TARGET}/usr
 ln -s . ${TOP}/install/${TARGET}/usr
-CFLAGS=$CFLAGS_TOOLSET CFLAGS_FOR_TARGET=$CFLAGS_TARGET CXXFLAGS_FOR_TARGET=$CFLAGS_TARGET ${TOP}/scratch/gcc/configure \
+CFLAGS=$CFLAGS_TOOLSET CXXFLAGS=$CFLAGS_TOOLSET CFLAGS_FOR_TARGET=$CFLAGS_TARGET CXXFLAGS_FOR_TARGET=$CFLAGS_TARGET ${TOP}/scratch/gcc/configure \
                                                             --prefix=${TOP}/install \
                                                             --target=${TARGET} \
                                                             --with-gmp=${TOP}/install_host \
