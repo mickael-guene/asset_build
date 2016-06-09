@@ -46,6 +46,7 @@ mkdir -p ${TOP}/build/gcc1
 mkdir -p ${TOP}/build/newlib
 mkdir -p ${TOP}/build/newlib-nano
 mkdir -p ${TOP}/build/gcc2
+mkdir -p ${TOP}/build/exe2obj
 mkdir ${TOP}/install
 mkdir ${TOP}/install/sysroot
 mkdir ${TOP}/out
@@ -227,6 +228,12 @@ cp ${TOP}/build/newlib-nano/target-libs/${TARGET}/lib/librdimon.a ${TOP}/install
 #FIXME : rebuild these ones with reduce size ???
 cp ${TOP}/install/${TARGET}/lib/libstdc++.a ${TOP}/install/${TARGET}/lib/libstdc++_nano.a
 cp ${TOP}/install/${TARGET}/lib/libsupc++.a ${TOP}/install/${TARGET}/lib/libsupc++_nano.a
+
+#######################################################################################################
+#exe2obj
+cd ${TOP}/build/exe2obj
+CFLAGS=$CFLAGS_TOOLSET make -f ${TOP}/scratch/exe2obj/Makefile all
+make -f ${TOP}/scratch/exe2obj/Makefile DESTDIR=${TOP}/install/bin install
 
 #######################################################################################################
 #generate tarball
