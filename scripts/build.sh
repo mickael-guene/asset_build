@@ -236,6 +236,10 @@ CFLAGS=$CFLAGS_TOOLSET make -f ${TOP}/scratch/exe2obj/Makefile all
 make -f ${TOP}/scratch/exe2obj/Makefile DESTDIR=${TOP}/install/bin install
 
 #######################################################################################################
+#copy link script
+cp ${TOP}/scratch/build/link/asset.ld ${TOP}/install/${TARGET}/lib/.
+
+#######################################################################################################
 #generate tarball
 cd ${TOP}
 if [ "$STRIP" ] ; then
