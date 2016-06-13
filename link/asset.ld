@@ -18,7 +18,7 @@ SECTIONS
     } > code_region
   .rodata           :
     {
-        *(.rodata*)
+        KEEP (*(.rodata*))
         KEEP (*(SORT_NONE(.init)))
         KEEP (*(SORT_NONE(.fini)))
         KEEP (*(.eh_frame))
@@ -32,7 +32,7 @@ SECTIONS
         KEEP (*(SORT(.fini_array.*)))
         KEEP (*(.fini_array ))
         KEEP (*(.jcr))
-        *(.data*)
+        KEEP (*(.data*))
         *(.bss*)
         *(COMMON)
     } > data_region
