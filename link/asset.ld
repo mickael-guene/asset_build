@@ -13,7 +13,7 @@ SECTIONS
 {
   .text             :
     {
-        *(.text)
+        *(.text.noread*)
     } > code_region
   .rodata           :
     {
