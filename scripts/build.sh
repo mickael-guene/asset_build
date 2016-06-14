@@ -232,7 +232,7 @@ cp ${TOP}/install/${TARGET}/lib/libsupc++.a ${TOP}/install/${TARGET}/lib/libsupc
 #######################################################################################################
 #exe2obj
 cd ${TOP}/build/exe2obj
-CFLAGS=$CFLAGS_TOOLSET make -f ${TOP}/scratch/exe2obj/Makefile all
+CFLAGS=$CFLAGS_TOOLSET VERSION="$VERSION" VERSION_MSG="$VERSION_MSG" make -f ${TOP}/scratch/exe2obj/Makefile all
 make -f ${TOP}/scratch/exe2obj/Makefile DESTDIR=${TOP}/install/bin install
 
 #######################################################################################################
