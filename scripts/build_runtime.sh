@@ -16,10 +16,10 @@ if [ ! "$isDelivery" ] ; then
 fi
 
 # delete previous versions
-rm -f ${TOP}/out/runtime-*
+rm -f ${TOP}/out/asset-runtime-*
 
 #######################################################################################################
 # not really a build but tar part of scratch test directory
 cd ${TOP}
-tar -C scratch/test --atime-preserve --exclude='.git' -czf out/runtime-${VERSION}.tgz .
+tar -C scratch/test --atime-preserve --exclude='.git' -czf out/asset-runtime-${VERSION}.tgz .
 

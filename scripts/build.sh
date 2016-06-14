@@ -247,8 +247,8 @@ if [ "$STRIP" ] ; then
     tar -C install --atime-preserve -cf - . | tar --atime-preserve -xf - -C $WDIR
     find $WDIR -type f -perm /111 -exec strip -p {} \; > /dev/null 2>&1
     #find $WDIR -exec install/bin/${TARGET}-strip -p {} \; > /dev/null 2>&1
-    tar -C $WDIR --atime-preserve -czf out/toolset-${VERSION}-${ARCH}.tgz .
+    tar -C $WDIR --atime-preserve -czf out/asset-toolset-${VERSION}-${ARCH}.tgz .
 else
-    tar -C install --atime-preserve -czf out/toolset-${VERSION}-${ARCH}.tgz .
+    tar -C install --atime-preserve -czf out/asset-toolset-${VERSION}-${ARCH}.tgz .
 fi
 

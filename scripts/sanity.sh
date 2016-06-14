@@ -12,8 +12,8 @@ WDIR=`mktemp -d` && trap "rm -Rf $WDIR" EXIT
 
 #untar toolset and runtime
 cd ${WDIR}
-tar xf ${TOP}/out/toolset-*
-tar xf ${TOP}/out/runtime-*
+tar xf ${TOP}/out/asset-toolset-*
+tar xf ${TOP}/out/asset-runtime-*
 
 #run testsuite
 env PATH=${WDIR}/bin:${PATH} ./runme.sh
