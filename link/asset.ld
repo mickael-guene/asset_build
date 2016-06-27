@@ -11,10 +11,11 @@ MEMORY
 
 SECTIONS
 {
-  .text             :
+  .text.noread      :
     {
         KEEP (*(.text.noread))
         *(.text.noread.*)
+        *libgcc.a:(.text*)
     } > code_region
   .rodata           :
     {
