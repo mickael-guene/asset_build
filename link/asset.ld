@@ -14,8 +14,8 @@ SECTIONS
   .text.noread      :
     {
         *libgcc.a:(.text*)
-        KEEP (*(.text.noread))
-        *(.text.noread.*)
+        KEEP (*(.text.noread.keep))
+        *(.text.noread*)
     } > code_region
   .rodata           :
     {
